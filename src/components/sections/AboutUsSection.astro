@@ -1,0 +1,66 @@
+---
+// Import the necessary dependencies.
+import AuthBtn from "@components/ui/buttons/AuthBtn.astro";
+import ContactIconBlock from "@components/ui/blocks/ContactIconBlock.astro";
+import TextInput from "@components/ui/forms/input/TextInput.astro";
+import EmailContactInput from "@components/ui/forms/input/EmailContactInput.astro";
+import PhoneInput from "@components/ui/forms/input/PhoneInput.astro";
+import TextAreaInput from "@components/ui/forms/input/TextAreaInput.astro";
+import Icon from "@components/ui/icons/Icon.astro";
+import heroImage from "@images/o-nama.jpeg";
+import { Image } from "astro:assets";
+
+// Define the variables that will be used in this component
+const title: string = "O nama";
+const subTitle: string =
+"Obratite nam se i zajedno ćemo naći savršeno rešenje za vaše električarske potrebe.";
+const formTitle: string = "Imate li neko pitanje za nas?";
+const formSubTitle: string = "Pošaljite nam poruku:";
+const formBottomText: string = "Odgovorićemo vam u roku od 1-2 radna dana.";
+const alt="Elektricar Sremska Mitrovica";
+---
+
+<!-- Contact Us -->
+<section class="mx-auto max-w-[85rem] px-4 pb-10 sm:px-6 lg:px-8 lg:py-14">
+  <div class="mx-auto max-w-2xl lg:max-w-7xl">
+
+
+    <div class=" grid items-center gap-6 lg:grid-cols-2 lg:gap-16">
+      <div class="flex flex-col rounded-xl p-4 sm:p-6 lg:p-8">
+        <section
+        class="mx-auto max-w-[85rem] space-y-8 px-4 sm:px-6 lg:px-0 2xl:max-w-full"
+      >
+        <!--Page header-->
+        <div class="text-center">
+            <h1
+              class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
+            >
+              {title}
+            </h1>
+             <p
+        class="mt-4 text-pretty text-lg text-neutral-600 dark:text-neutral-400"
+      >
+                "Deo današnje dinamične svakodnevnice se jednim delom sastoji iz kvarova na električnim instalacijama, kućnim aparatima, beloj tehnici... To može da prouzrokuje niz problema a kada dođe do kvara oslonite se na nas. 
+                Mi smo mlad servis koji postoji od 2018 godine. Zanat smo učili i razvijali od majstora sa višedecenijskim iskustvom. 
+                Prateći nove tehnologije, oslanjajući se na savete starih majstora, vođeni višegodišnjim iskustvom, trudimo se da stečeno znanje i veštine upotrebimo pri rešavanju takvih situacija i da u što kraćem vremenskom periodu saniramo kvar. Na većinu kvarova dobićete garanciju kao i na svaki novi ugrađeni deo."
+          
+            </p>
+          </div>
+             
+      </section>
+      </div>
+
+      <!--ContactIconBlocks are used to display different methods of contacting, including visiting office, email, browsing knowledgebase, and FAQ.-->
+      <div class="divide-y  divide-neutral-300 dark:divide-neutral-700">
+        <Image
+        src={heroImage}
+        alt={alt}
+        class="  lg:max-w-md  scale-90 object-cover  rounded-xl object-center"
+        draggable={"false"}
+        loading={"eager"}
+        format={"avif"}
+	 />
+      </div>
+    </div>
+  </div>
+</section>

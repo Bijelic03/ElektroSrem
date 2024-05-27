@@ -42,7 +42,7 @@ interface Props {
 
 <!-- Defining a grid container that holds all the content -->
 <section
-  class="mx-auto grid max-w-[85rem] gap-4 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full"
+  class="mx-auto grid max-w-[85rem] gap-4 px-4 pb-14 pt-10 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full"
 >
   <!-- Title and description -->
   <div>
@@ -77,13 +77,13 @@ interface Props {
 
   </div>
   <!-- Hero Image Section -->
-  <div class="flex w-full">
+  <div class="flex w-full justify-center">
       <div class="top-12 overflow-hidden">
 	{src && alt &&
 	<Image
         src={src}
         alt={alt}
-        class="h-full w-full scale-110 object-cover object-center"
+        class="h-full max-w-md w-full scale-90 object-cover object-center"
         draggable={"false"}
         loading={"eager"}
         format={"avif"}

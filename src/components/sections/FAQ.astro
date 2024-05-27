@@ -1,6 +1,7 @@
 ---
 // Import the necessary AccordionItem component and JSON data
 import AccordionItem from "@components/ui/blocks/AccordionItem.astro";
+import PrimaryCTA from "../ui/buttons/PrimaryCTA.astro";
 
 // Define props from Astro
 const { title, faqs } = Astro.props;
@@ -39,6 +40,9 @@ const makeId = (base: any, index: any) => `${base}${index + 1}`;
         <p class="mt-1 hidden text-neutral-600 dark:text-neutral-400 md:block">
           {faqs.subTitle}
         </p>
+        <div class="mt-5">
+          <PrimaryCTA url="/kontakt" title="Postavite pitanje"/>
+        </div>
       </div>
     </div>
     <!-- FAQ accordion items -->

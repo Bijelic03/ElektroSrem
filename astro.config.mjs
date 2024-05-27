@@ -1,16 +1,17 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, passthroughImageService } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import vercelStatic from "@astrojs/vercel/static";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
   site: "https://screwfast.uk",
   image: {
-    domains: ["images.unsplash.com"],
+    service: passthroughImageService(),
   },
   i18n: {
     defaultLocale: "en",
@@ -24,6 +25,7 @@ export default defineConfig({
   },
   prefetch: true,
   integrations: [
+    icon(),
     tailwind(),
     sitemap({
       i18n: {

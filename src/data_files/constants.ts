@@ -1,12 +1,12 @@
 import ogImageSrc from "@images/social.png";
 
 export const SITE = {
-  title: "ScrewFast",
+  title: "Električar Sremska Mitrovica",
   tagline: "Top-quality Hardware Tools",
-  description: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs. Start exploring and contact our sales team for superior quality and reliability.",
-  description_short: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
-  url: "https://screwfast.uk",
-  author: "Emil Gulamov",
+  description: "Elektrosrem je vaš stručni partner za sve električarske radove u Sremskoj Mitrovici i okolini. Pružamo vrhunske alate i usluge visokog kvaliteta za sve vaše projekte. Otkrijte širok spektar hardverskih alata i usluga koje su dizajnirane da zadovolje sve vaše potrebe. Kontaktirajte nas danas i oslonite se na našu stručnost i pouzdanost za sve vaše električarske radove.",
+  description_short: "Elektrosrem nudi povoljne električarske usluge na teritoriji Sremske Mitrovice i okoline.",
+  url: "https://elektrosrem.rs",
+  author: "Dragan Bijelić",
 };
 
 export const SEO = {
@@ -33,7 +33,7 @@ export const OG = {
   locale: "en_US",
   type: "website",
   url: SITE.url,
-  title: `${SITE.title}: : Hardware Tools & Construction Services`,
-  description: "Equip your projects with ScrewFast's top-quality hardware tools and expert construction services. Trusted by industry leaders, ScrewFast offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
+  title: `${SITE.title}: : Profesionalne električarske usluge za sve vaše potrebe.`,
+  description: "Nudimo usluge iz oblasti elektrike, održavanje i izrada elektro instalacije jake i slabe struje, servis bele tehnike i malih kućnih aparata, ugradnja video nadzora...",
   image: ogImageSrc,
 };

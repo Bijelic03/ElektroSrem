@@ -9,11 +9,12 @@ import TextAreaInput from "@components/ui/forms/input/TextAreaInput.astro";
 import Icon from "@components/ui/icons/Icon.astro";
 
 // Define the variables that will be used in this component
-const title: string = "Contact us";
+const title: string = "Kontaktirajte nas";
 const subTitle: string =
-  "Have questions or want to discuss a project? Reach out, and let's craft the perfect solution with our tools and services.";
-const formTitle: string = "Fill in the form below";
-const formSubTitle: string = "We'll get back to you in 1-2 business days.";
+"Obratite nam se i zajedno ćemo naći savršeno rešenje za vaše električarske potrebe.";
+const formTitle: string = "Imate li neko pitanje za nas?";
+const formSubTitle: string = "Pošaljite nam poruku:";
+const formBottomText: string = "Odgovorićemo vam u roku od 1-2 radna dana.";
 ---
 
 <!-- Contact Us -->
@@ -33,10 +34,15 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
     <div class="mt-12 grid items-center gap-6 lg:grid-cols-2 lg:gap-16">
       <div class="flex flex-col rounded-xl p-4 sm:p-6 lg:p-8">
         <h2
-          class="mb-8 text-xl font-bold text-neutral-700 dark:text-neutral-300"
+          class="text-xl font-bold text-neutral-700 dark:text-neutral-300"
         >
           {formTitle}
         </h2>
+        <h2
+        class="mb-8 text-l font-bold text-neutral-700 dark:text-neutral-300"
+      >
+        {formSubTitle}
+      </h2>
         <!-- Form for user input with various input fields.-->
         <!-- Each field utilizes a different input component for the specific type of input (text, email, phone, and textarea)-->
         <form>
@@ -44,12 +50,12 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <TextInput
                 id="hs-firstname-contacts"
-                label="First Name"
+                label="Ime"
                 name="hs-firstname-contacts"
               />
               <TextInput
                 id="hs-lastname-contacts"
-                label="Last Name"
+                label="Prezime"
                 name="hs-firstname-contacts"
               />
             </div>
@@ -57,18 +63,18 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
             <PhoneInput id="hs-phone-number" />
             <TextAreaInput
               id="hs-about-contacts"
-              label="Details"
+              label="Postavite pitanje"
               name="hs-about-contacts"
             />
           </div>
 
           <div class="mt-4 grid">
-            <AuthBtn title="Send Message" />
+            <AuthBtn title="Pošalji poruku" />
           </div>
 
           <div class="mt-3 text-center">
             <p class="text-sm text-neutral-600 dark:text-neutral-400">
-              {formSubTitle}
+              {formBottomText}
             </p>
           </div>
         </form>
@@ -77,38 +83,38 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
       <!--ContactIconBlocks are used to display different methods of contacting, including visiting office, email, browsing knowledgebase, and FAQ.-->
       <div class="divide-y divide-neutral-300 dark:divide-neutral-700">
         <ContactIconBlock
-          heading="Knowledgebase"
-          content="Browse through all of our knowledgebase articles."
+          heading="Usluge"
+          content="Pogledaj koje sve usluge nudimo."
           isLinkVisible={true}
-          linkTitle="Visit guides & tutorials"
+          linkTitle="Pogledaj usluge"
           linkURL="#"
           isArrowVisible={true}
           ><Icon name="question" />
         </ContactIconBlock>
 
         <ContactIconBlock
-          heading="FAQ"
-          content="Explore our FAQ for quick, clear answers to common queries."
+          heading="Pitanja"
+          content="Pogledajte često postavljana pitanja"
           isLinkVisible={true}
-          linkTitle="Visit FAQ"
+          linkTitle="Pogledaj pitanja"
           linkURL="#"
           isArrowVisible={true}
           ><Icon name="chatBubble" />
         </ContactIconBlock>
 
         <ContactIconBlock
-          heading="Visit our office"
-          content="UK ScrewFast"
+          heading="Adresa"
+          content="Kraljevica Marka 24,"
           isAddressVisible={true}
-          addressContent="72 Union Terrace, E10 4PE London"
+          addressContent="Sremska Mitrovica 22000"
           ><Icon name="mapPin" />
         </ContactIconBlock>
 
         <ContactIconBlock
-          heading="Contact us by email"
-          content="Prefer the written word? Drop us an email at"
+          heading="Kontaktirajte nas putem email-a"
+          content="Pošaljite nam email na:"
           isLinkVisible={true}
-          linkTitle="support@screwfast.uk"
+          linkTitle="elektrosrem@gmail.com"
           linkURL="#"
           ><Icon name="envelopeOpen" />
         </ContactIconBlock>

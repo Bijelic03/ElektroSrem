@@ -1,22 +1,22 @@
 [
   {
-    "heading": "Dedicated Teams",
-    "content": "Benefit from our committed teams who ensure your success is personal. Count on expert guidance and exceptional results throughout your project journey.",
-    "svg": "groups"
+    "heading": "Popravka bele tehnike i grejnih tela",
+    "content": "U Sremskoj Mitrovici vršimo servis bele tehnike i grejnih tela. To uključuje dolazak na adresu, pronalazak kvara i popravku uređaja. Ukoliko je potrebno i odnošenje uređaja u servis radi dalje popravke.",
+    "svg": "appliances"
   },
   {
-    "heading": "Simplicity and Affordability",
-    "content": "Find easy-to-use, affordable solutions with ScrewFast's line of tools and equipment. Our products make procurement simple and keep projects within budget.",
-    "svg": "verified"
+    "heading": "Popravka malih kućnih aparata",
+    "content": "Vršimo popravku malih kućnih aparata pegli, usisivača, miksera, fenova za kosu, stonih lampi...",
+    "svg": "smallAppliances"
   },
   {
-    "heading": "Comprehensive Documentation",
-    "content": "Integrate with ease using ScrewFast's exhaustive guides and libraries. Achieve seamless product adoption with our full suite of documentation designed for your success.",
-    "svg": "books"
+    "heading": "Izrada nove i popravka stare instalacije",
+    "content": "Ukoliko imate problem sa elektro instalacijom ili vam je potrebna nova instalacija pozovite nas. Dolazimo na adresu na teritoriji grada Sremska Mitrovica u što bržem mogućem roku.",
+    "svg": "electricalInstalation"
   },
   {
-    "heading": "User-Centric Design",
-    "content": "Experience the difference with ScrewFast's user-focused design — where functionality meets practicality for an enhanced work experience.",
-    "svg": "frame"
+    "heading": "Zamena razvodnih tabli, osigurača, montaža lampi",
+    "content": "Vršimo zamenu topljivih osigurača automatskim. Automatski osigurači imaju dosta benefita u odnosu na topljive osigurače a jedan od njih je upravo taj što su jednostavniji za upotrebu i jeftiniji. Zamena kompletnih tabli i šemiranje...",
+    "svg": "fuseBox"
   }
 ]
