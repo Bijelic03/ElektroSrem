@@ -7,6 +7,7 @@ import EmailContactInput from "@components/ui/forms/input/EmailContactInput.astr
 import PhoneInput from "@components/ui/forms/input/PhoneInput.astro";
 import TextAreaInput from "@components/ui/forms/input/TextAreaInput.astro";
 import Icon from "@components/ui/icons/Icon.astro";
+import GithubBtn from "../ui/buttons/GithubBtn.astro";
 
 // Define the variables that will be used in this component
 const title: string = "Kontaktirajte nas";
@@ -29,6 +30,9 @@ const formBottomText: string = "Odgovorićemo vam u roku od 1-2 radna dana.";
       <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-400">
         {subTitle}
       </p>
+      <div class="mt-5">
+        <GithubBtn url="tel:0601535566" title="Pozovite"/>
+      </div>
     </div>
 
     <div class="mt-12 grid items-center gap-6 lg:grid-cols-2 lg:gap-16">

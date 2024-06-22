@@ -2,41 +2,47 @@
 const navBarLinks = [
   { name: "Početna", url: "/" },
   { name: "Usluge", url: "/usluge" },
-  { name: "Blog", url: "/blog" },
   { name: "O nama", url: "/o-nama"},
   { name: "Kontakt", url: "/kontakt" }
 ];
-// An array of links for footer
-const footerLinks = [
-  {
-    section: "Ecosystem",
-    links: [
-      { name: "Documentation", url: "/welcome-to-docs/" },
-      { name: "Tools & Equipment", url: "/products" },
-      { name: "Construction Services", url: "/services" },
-    ],
-  },
-  {
-    section: "Company",
-    links: [
-      { name: "About us", url: "#" },
-      { name: "Blog", url: "/blog" },
-      { name: "Careers", url: "#" },
-      { name: "Customers", url: "#" },
-    ],
-  },
-];
+
+interface ContactInfo {
+  name: string,
+  text: string,
+  url?: string
+}
+
+interface PageLink {
+  name: string,
+  url: string
+}
+
+interface FooterData {
+  pageLinks: PageLink[],
+  contactInfo: ContactInfo[]
+}
+
+const footerData = {
+  pageLinks: [
+    { name: "Početna", url: "/" },
+      { name: "Usluge", url: "/usluge" },
+      { name: "O nama", url: "/o-nama" },
+      { name: "Kontakt", url: "/kontakt" }
+  ],
+  contactInfo: [
+    { name: "Telefon", text: "+381 60 1535566", url: "tel:0601535566"},
+    { name: "E-mail", text: "elektrosrem@gmail.com", url: "/kontakt"},
+    { name: "Radno vreme", text: "Po pozivu, 9:00-20:00"}
+  ]
+}
 // An object of links for social icons
 const socialLinks = {
-  facebook: "https://www.facebook.com/",
-  x: "https://twitter.com/",
-  github: "https://github.com/mearashadowfax/ScrewFast",
-  google: "https://www.google.com/",
-  slack: "https://slack.com/",
+  facebook: "https://www.facebook.com/p/Elektro-Srem-100088658937454",
+  instagram: "https://instagram.com/elektrosrem",
 };
 
 export default {
   navBarLinks,
-  footerLinks,
+  footerData,
   socialLinks,
 };
