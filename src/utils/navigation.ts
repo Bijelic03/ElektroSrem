@@ -24,7 +24,7 @@ interface FooterData {
 
 const footerData: FooterData = {
   pageLinks: [
-    { name: "Početna", url: "/" },
+    { name: "Početna", url: "/ElektroSrem" },
       { name: "Usluge", url: "/ElektroSrem/usluge" },
       { name: "O nama", url: "/ElektroSrem/o-nama" },
       { name: "Kontakt", url: "/ElektroSrem/kontakt" }
