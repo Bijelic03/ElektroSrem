@@ -26,32 +26,6 @@ jobs:
       - name: Build the project
         run: npm run build
 
-      - name: Minify HTML files
-        run: |
-          node <<EOF
-          import fs from 'node:fs/promises';
-          import { globby } from 'globby';
-          import { minify } from 'html-minifier';
-
-          const path = './.vercel/output/static';
-          const files = await globby(\`\${path}/**/*.html\`);
-
-          await Promise.all(
-            files.map(async (file) => {
-              console.log('Processing file:', file);
-              let html = await fs.readFile(file, 'utf-8');
-              html = minify(html, {
-                removeComments: true,
-                preserveLineBreaks: true,
-                collapseWhitespace: true,
-                minifyJS: true
-              });
-              await fs.writeFile(file, html);
-            })
-          );
-          console.log('Minifikacija HTML datoteka završena.');
-          EOF
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
