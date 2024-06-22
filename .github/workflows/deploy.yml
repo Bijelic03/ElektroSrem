@@ -39,4 +39,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        publish_dir: ./.vercel/output/static
+        with:
+          publish_dir: ./.vercel/output/static
