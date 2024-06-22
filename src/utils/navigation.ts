@@ -22,7 +22,7 @@ interface FooterData {
   contactInfo: ContactInfo[]
 }
 
-const footerData = {
+const footerData: FooterData = {
   pageLinks: [
     { name: "Početna", url: "/" },
       { name: "Usluge", url: "/usluge" },
