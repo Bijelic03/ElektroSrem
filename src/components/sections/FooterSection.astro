@@ -59,7 +59,7 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Kreira
                     <span>{ci.name}:</span><span>{ci.text}</span>
                     </a>
                ) : (
-                <span>{ci.name}:</span><span>{ci.text}</span>
+                <span class="text-neutral-600">{ci.name}:</span><span  class="text-neutral-600">{ci.text}</span>
                )}
             </li>
           ))}
