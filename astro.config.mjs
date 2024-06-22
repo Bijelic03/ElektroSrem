@@ -10,7 +10,7 @@ import icon from "astro-icon";
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
   site: 'https://Bijelic03.github.io',
-  base: "/ElektroSrem/",
+  base: "ElektroSrem",
   image: {
     service: passthroughImageService(),
   },

@@ -46,4 +46,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          publish_dir: ./.vercel/output/static/elektrosrem
+          publish_dir: ./.vercel/output/static

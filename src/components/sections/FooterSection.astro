@@ -20,7 +20,7 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Kreira
   <div
     class="mx-auto w-full max-w-[85rem] px-4 py-10 sm:px-6 lg:px-16 lg:pt-20 2xl:max-w-screen-2xl"
   >
-    <div class="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-5">
+    <div class="flex flex-col sm:flex-row justify-between items-center gap-6">
       <div class="col-span-full lg:col-span-1">
         <!-- Brand Logo -->
         <BrandLogo class="h-auto w-32" />
@@ -66,7 +66,7 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Kreira
         </ul>
       </div>
 
-      <div class="col-span-2">
+      <div class="col-span-2 md:w-1/4">
         <h3 class="font-bold text-neutral-800 dark:text-neutral-200">
           {sectionThreeTitle}
         </h3>
