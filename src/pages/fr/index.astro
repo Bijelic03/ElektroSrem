@@ -3,13 +3,10 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import HeroSection from "@components/sections/landing/HeroSection.astro";
 import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
-import ClientsSection from "@components/sections/landing/ClientsSection.astro";
 import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
 import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
 import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
-import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/FAQ.astro";
-import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
 import heroImage from "@images/hero-image.avif";
 import faqs from "@data/fr/faqs.json";
 import features from "@data/fr/features.json";
@@ -29,12 +26,6 @@ const avatarSrcs: Array<string> = [
 ---
 
 <MainLayout lang="fr">
-  <AnnouncementBanner
-    btnId="dismiss-button"
-    btnTitle="Découvrez ScrewFast sur GitHub"
-    url="https://github.com/mearashadowfax/ScrewFast"
-  />
-
   <HeroSection
     title=`Équipez vos projets avec <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>`
     subTitle="Outils matériels de haute qualité et services de construction experts pour tous les besoins en projet."
@@ -49,11 +40,6 @@ const avatarSrcs: Array<string> = [
     reviews=`À partir de plus de <span class="font-bold">12,8k</span> avis`
     src={heroImage}
     alt="Pile de boîtes de produits ScrewFast contenant des outils matériels assortis"
-  />
-
-  <ClientsSection
-    title="Faites confiance aux leaders de l'industrie"
-    subTitle="Découvrez la fiabilité choisie par les géants de l'industrie."
   />
 
   <FeaturesGeneral
@@ -133,7 +119,6 @@ const avatarSrcs: Array<string> = [
     ]}
   />
 
-  <PricingSection pricing={pricing} />
 
   <FAQ title="Questions<br />fréquemment posées" faqs={faqs} />
 
