@@ -114,6 +114,9 @@ export default defineConfig({
       brotli: true,
     }),
   ],
+  build: {
+    outDir: './.vercel/output/static',
+  },
   output: "static",
   experimental: {
     clientPrerender: true,
