@@ -31,8 +31,8 @@ const footerData: FooterData = {
   ],
   contactInfo: [
     { name: "Telefon", text: "+381 60 1535566", url: "tel:0601535566"},
-    { name: "E-mail", text: "elektrosrem@gmail.com", url: "/ElektroSrem/kontakt"},
-    { name: "Radno vreme", text: "Po pozivu, 9:00-20:00"}
+    { name: "E-mail", text: "elektrosrem@gmail.com", url: "mailto:elektrosrem@gmail.com"},
+    { name: "Radno vreme", text: "Po pozivu, 7:00-17:00"}
   ]
 }
 // An object of links for social icons

@@ -91,7 +91,7 @@ const formBottomText: string = "Odgovorićemo vam u roku od 1-2 radna dana.";
           content="Pogledaj koje sve usluge nudimo."
           isLinkVisible={true}
           linkTitle="Pogledaj usluge"
-          linkURL="#"
+          linkURL="/ElektroSrem/usluge"
           isArrowVisible={true}
           ><Icon name="question" />
         </ContactIconBlock>
@@ -101,25 +101,30 @@ const formBottomText: string = "Odgovorićemo vam u roku od 1-2 radna dana.";
           content="Pogledajte često postavljana pitanja"
           isLinkVisible={true}
           linkTitle="Pogledaj pitanja"
-          linkURL="#"
+          linkURL="/ElektroSrem"
           isArrowVisible={true}
           ><Icon name="chatBubble" />
         </ContactIconBlock>
 
         <ContactIconBlock
-          heading="Adresa"
-          content="Kraljevica Marka 24,"
-          isAddressVisible={true}
-          addressContent="Sremska Mitrovica 22000"
-          ><Icon name="mapPin" />
-        </ContactIconBlock>
+        heading="Adresa"
+        isLinkVisible={true}
+        content="Pronađite nas na adresi:"
+        linkTitle="Marka Kraljevića bb, Sremska Mitrovica 22000"
+        linkURL="https://maps.app.goo.gl/XamqcRMxaP42DFtD6"
+        isArrowVisible={true}
+        newPage={true}
+        ><Icon name="mapPin" />
+      </ContactIconBlock>
 
-        <ContactIconBlock
+
+       <ContactIconBlock
           heading="Kontaktirajte nas putem email-a"
           content="Pošaljite nam email na:"
           isLinkVisible={true}
           linkTitle="elektrosrem@gmail.com"
-          linkURL="#"
+          linkURL="mailto:elektrosrem@gmail.com"
+          isArrowVisible={true}
           ><Icon name="envelopeOpen" />
         </ContactIconBlock>
       </div>

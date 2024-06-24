@@ -9,6 +9,7 @@ const {
   linkTitle,
   linkURL,
   isArrowVisible,
+  newPage,
 } = Astro.props;
 
 // Define TypeScript interface for props
@@ -21,6 +22,7 @@ interface Props {
   linkTitle?: string;
   linkURL?: string;
   isArrowVisible?: boolean;
+  newPage?: boolean;
 }
 
 // Define SVG arrow to be used in the component
@@ -28,6 +30,8 @@ const arrowSVG: string = `<svg
 class="h-4 w-4 flex-shrink-0 transition ease-in-out group-hover:translate-x-1"
 fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /> </svg>`;
+
+const newPageTarget = newPage ? "_blank" : "_self";
 ---
 
 <!-- Root container, which arranges the heading and content -->
@@ -51,7 +55,8 @@ fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
          The link also conditionally includes an arrow SVG if isArrowVisible is true -->
     {
       isLinkVisible ? (
-        <a
+        <a 
+          target={newPageTarget}
           class="group mt-2 inline-flex items-center gap-x-2 rounded-lg text-sm font-medium text-zinc-600 outline-none ring-zinc-500 transition duration-300 hover:text-zinc-800 focus-visible:ring dark:text-zinc-400 dark:ring-zinc-200 dark:hover:text-zinc-200 dark:focus:outline-none dark:focus:ring-1 "
           href={linkURL}
         >
