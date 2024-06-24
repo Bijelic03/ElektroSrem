@@ -1,5 +1,6 @@
 import { defineConfig, passthroughImageService } from "astro/config";
 import tailwind from "@astrojs/tailwind";
+import partytown from "@astrojs/partytown";
 import vercelStatic from "@astrojs/vercel/static";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
@@ -25,6 +26,11 @@ export default defineConfig({
   },
   prefetch: true,
   integrations: [
+    partytown({
+			config: {
+			  forward: ["dataLayer.push"],
+			},
+		}),
     icon(),
     tailwind(),
     sitemap({
@@ -36,11 +42,6 @@ export default defineConfig({
         },
       },
     }),
-    partytown({
-			config: {
-			  forward: ["dataLayer.push"],
-			},
-		}),
     starlight({
       title: "ScrewFast Docs",
       defaultLocale: "root",
