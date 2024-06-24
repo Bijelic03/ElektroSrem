@@ -26,6 +26,10 @@ jobs:
       - name: Build the project
         run: npm run build
 
+      - name: Minify HTML files
+        run: node process-html.mjs
+
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

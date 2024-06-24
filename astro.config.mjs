@@ -73,8 +73,8 @@ export default defineConfig({
           ],
         },
         {
-          label: "Construction Services",
-          autogenerate: { directory: "construction" },
+          label: "Elektricarske usluge",
+          autogenerate: { directory: "elektricar" },
         },
         {
           label: "Advanced Topics",
@@ -96,14 +96,14 @@ export default defineConfig({
           tag: "meta",
           attrs: {
             property: "og:image",
-            content: "https://screwfast.uk" + "/social.webp",
+            content: "https://elektrosrem.rs" + "/social.webp",
           },
         },
         {
           tag: "meta",
           attrs: {
             property: "twitter:image",
-            content: "https://screwfast.uk" + "/social.webp",
+            content: "https://elektrosrem.rs" + "/social.webp",
           },
         },
       ],

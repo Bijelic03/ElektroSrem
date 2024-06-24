@@ -7,7 +7,7 @@ import frStrings from "@utils/fr/navigation.ts";
 
 // Select the correct translation based on the page's lang prop:
 const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
-const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/ElektroSrem";
+const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
 ---
 
 <!-- Main header component -->
@@ -205,5 +205,5 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/ElektroSrem";
 <!--Import the necessary Collapse and Overlay plugins-->
 <!--https://preline.co/plugins/html/collapse.html-->
 <!--https://preline.co/plugins/html/overlay.html-->
-<script is:inline src="/ElektroSrem/scripts/vendor/preline/collapse/index.js"></script>
-<script is:inline src="/ElektroSrem/scripts/vendor/preline/overlay/index.js"></script>
+<script is:inline src="/scripts/vendor/preline/collapse/index.js"></script>
+<script is:inline src="/scripts/vendor/preline/overlay/index.js"></script>

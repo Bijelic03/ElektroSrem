@@ -1,9 +1,9 @@
 // An array of links for navigation bar
 const navBarLinks = [
-  { name: "Početna", url: "/ElektroSrem" },
-  { name: "Usluge", url: "/ElektroSrem/usluge" },
-  { name: "O nama", url: "/ElektroSrem/o-nama"},
-  { name: "Kontakt", url: "/ElektroSrem/kontakt" }
+  { name: "Početna", url: "/" },
+  { name: "Usluge", url: "/usluge" },
+  { name: "O nama", url: "/o-nama"},
+  { name: "Kontakt", url: "/kontakt" }
 ];
 
 interface ContactInfo {
@@ -24,10 +24,10 @@ interface FooterData {
 
 const footerData: FooterData = {
   pageLinks: [
-    { name: "Početna", url: "/ElektroSrem" },
-      { name: "Usluge", url: "/ElektroSrem/usluge" },
-      { name: "O nama", url: "/ElektroSrem/o-nama" },
-      { name: "Kontakt", url: "/ElektroSrem/kontakt" }
+    { name: "Početna", url: "/" },
+      { name: "Usluge", url: "/usluge" },
+      { name: "O nama", url: "/o-nama" },
+      { name: "Kontakt", url: "/kontakt" }
   ],
   contactInfo: [
     { name: "Telefon", text: "+381 60 1535566", url: "tel:0601535566"},

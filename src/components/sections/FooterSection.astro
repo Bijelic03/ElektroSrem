@@ -41,7 +41,7 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Kreira
                     <span>{ci.name}:</span><span>{ci.text}</span>
                     </a>
                ) : (
-                <span class="text-neutral-600">{ci.name}:</span><span  class="text-neutral-600">{ci.text}</span>
+                <span class="text-neutral-600">{ci.name}:</span><span  class="text-neutral-600 dark:text-neutral-400">{ci.text}</span>
                )}
             </li>
           ))}
@@ -88,9 +88,9 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Kreira
           © <span>2024</span> {SITE.title}. {crafted}
           <a
             class="rounded-lg font-medium underline underline-offset-2 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-none focus-visible:ring dark:ring-zinc-200 dark:hover:text-neutral-300"
-            href="https://draganbijelic.com"
+            href="callto"
             target="_blank"
-            rel="noopener noreferrer">Dragan Bijelic</a
+            rel="noopener noreferrer">Dragan Bijelic Tel: +381 60 3678388</a
           >.
         </p>
       </div>
@@ -102,7 +102,7 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Kreira
         </FooterSocialLink>
 
         <FooterSocialLink url={strings.socialLinks.instagram}
-          ><Icon name="instagramFooter" /></FooterSocialLink
+          ><Icon name="instagramFooter"/></FooterSocialLink
         >
       </div>
     </div>
