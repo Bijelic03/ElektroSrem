@@ -36,6 +36,11 @@ export default defineConfig({
         },
       },
     }),
+    partytown({
+			config: {
+			  forward: ["dataLayer.push"],
+			},
+		}),
     starlight({
       title: "ScrewFast Docs",
       defaultLocale: "root",

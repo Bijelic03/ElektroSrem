@@ -31,7 +31,7 @@ const footerData: FooterData = {
   ],
   contactInfo: [
     { name: "Telefon", text: "+381 60 1535566", url: "tel:0601535566"},
-    { name: "E-mail", text: "elektrosrem@gmail.com", url: "mailto:elektrosrem@gmail.com"},
+    { name: "E-mail", text: "elektrosrem1@gmail.com", url: "mailto:elektrosrem1@gmail.com"},
     { name: "Radno vreme", text: "Po pozivu, 7:00-17:00"}
   ]
 }
