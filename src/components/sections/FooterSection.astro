@@ -25,30 +25,12 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Kreira
         <!-- Brand Logo -->
         <BrandLogo class="h-auto w-32" />
       </div>
-      <!-- An array of links for Product and Company sections -->
-      <div class="col-span-1">
-        <h3 class="font-bold text-neutral-800 dark:text-neutral-200">
-          Stranice
-        </h3>
-        <ul class="mt-3 grid space-y-3">
-          {strings.footerData.pageLinks.map(link =>(
-            <li>
-               <a
-                    href={link.url}
-                    class="inline-flex gap-x-2 rounded-lg text-neutral-600 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-500 focus-visible:ring dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-none"
-                    >
-                    {link.name}
-                    </a>
-            </li>
-          ))}
-        </ul>
-      </div>
 
       <div class="col-span-1">
-        <h3 class="font-bold text-neutral-800 dark:text-neutral-200">
+        <h3 class="font-bold text-neutral-800 dark:text-neutral-200 text-center sm:text-left">
           Kontaktirajte nas
         </h3>
-        <ul class="mt-3 grid space-y-3">
+        <ul class="mt-3 grid space-y-3 text-center sm:text-left">
           {strings.footerData.contactInfo.map(ci =>(
             <li>
                {ci?.url ? (
@@ -65,6 +47,25 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Kreira
           ))}
         </ul>
       </div>
+
+            <!-- An array of links for Product and Company sections -->
+            <div class="col-span-1">
+              <h3 class=" font-bold text-neutral-800 dark:text-neutral-200 text-center sm:text-left">
+                Stranice
+              </h3>
+              <ul class="mt-3 grid grid-cols-2 lg:grid-cols-1 gap-3">
+                {strings.footerData.pageLinks.map(link => (
+                  <li >
+                    <a
+                      href={link.url}
+                      class="inline-flex gap-x-2 rounded-lg text-neutral-600 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-500 focus-visible:ring dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-none"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
       <div class="col-span-2 md:w-1/4">
         <h3 class="font-bold text-neutral-800 dark:text-neutral-200">
