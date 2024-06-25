@@ -3,7 +3,7 @@ import sharp from "sharp";
 import ico from "sharp-ico";
 import path from "node:path";
 
-const faviconSrc = path.resolve("src/images/icon.png");
+const faviconSrc = path.resolve("src/images/elektro_srem_logo_bela_pozadina-01.png");
 
 export const GET: APIRoute = async () => {
 
