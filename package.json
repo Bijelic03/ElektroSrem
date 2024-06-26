@@ -6,6 +6,7 @@
     "dev": "astro dev --host",
     "start": "astro dev",
     "build": "astro check && astro build && node process-html.mjs",
+    "buildProd": "astro check && astro build --mode prod && node process-html.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
