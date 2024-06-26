@@ -23,12 +23,17 @@ jobs:
       - name: Install dependencies
         run: npm install
       
+      - name: 'Create env file'
+        run: |
+          touch ./.env.production
+          echo PUBLIC_ELEKTROSREM_PUBLIC_KEY=${{ secrets.EMAIL_JS_PUBLIC_KEY }} >> .env
+          cat .env
+
       - name: Build the project
         run: npm run build
 
       - name: Minify HTML files
         run: node process-html.mjs
-
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

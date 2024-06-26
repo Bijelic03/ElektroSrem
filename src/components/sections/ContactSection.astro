@@ -45,7 +45,7 @@ import { pathHasLocale } from 'astro:i18n';
         phone,
         message
       };
-        await emailjs.send('service_37zy63b', 'template_4bku19b', templateParams, "uo4BMMgdwEQk9mhai");
+        await emailjs.send('service_37zy63b', 'template_4bku19b', templateParams, import.meta.env.PUBLIC_ELEKTROSREM_PUBLIC_KEY);
 
         form.reset();
       } catch (error) {
