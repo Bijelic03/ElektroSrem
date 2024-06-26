@@ -8,7 +8,7 @@ import PhoneInput from "@components/ui/forms/input/PhoneInput.astro";
 import TextAreaInput from "@components/ui/forms/input/TextAreaInput.astro";
 import Icon from "@components/ui/icons/Icon.astro";
 import GithubBtn from "../ui/buttons/GithubBtn.astro";
-
+import { ConfigNotFound } from "node_modules/astro/dist/core/errors/errors-data";
 // Define the variables that will be used in this component
 const title: string = "Kontaktirajte nas";
 const subTitle: string =
@@ -16,7 +16,54 @@ const subTitle: string =
 const formTitle: string = "Imate li neko pitanje za nas?";
 const formSubTitle: string = "Pošaljite nam poruku:";
 const formBottomText: string = "Odgovorićemo vam u roku od 1-2 radna dana.";
+
+//const public_key = import.meta.env.VITE_ELEKTROSREM_PUBLIC_KEY;
+
 ---
+<!-- HTML i JavaScript za kontakt formu i slanje emaila -->
+<script>
+import { pathHasLocale } from 'astro:i18n';
+
+  function attachSendEmail() {
+    async function sendEmail(event) {
+      event.preventDefault();
+      const form = event.target;
+
+      const firstName = form.querySelector('#hs-firstname-contacts').value;
+      const lastName = form.querySelector('#hs-lastname-contacts').value;
+      const email = form.querySelector('#hs-email-contacts').value;
+      const phone = form.querySelector('#hs-phone-number').value;
+      const message = form.querySelector('#hs-about-contacts').value;
+      
+      console.log(firstName, lastName, email, phone, message)
+      try {
+        const emailjs = await import('@emailjs/browser');
+        const templateParams = {
+        firstName,
+        lastName,
+        email,
+        phone,
+        message
+      };
+        await emailjs.send('service_37zy63b', 'template_4bku19b', templateParams, "uo4BMMgdwEQk9mhai");
+
+        form.reset();
+      } catch (error) {
+      }
+    }
+
+    const form = document.querySelector('form');
+    if (form) {
+      form.addEventListener('submit', sendEmail);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', attachSendEmail);
+  } else {
+    attachSendEmail();
+  }
+</script>
 
 <!-- Contact Us -->
 <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
@@ -122,7 +169,7 @@ const formBottomText: string = "Odgovorićemo vam u roku od 1-2 radna dana.";
           heading="Kontaktirajte nas putem email-a"
           content="Pošaljite nam email na:"
           isLinkVisible={true}
-          linkTitle="elektrosrem@gmail.com"
+          linkTitle="elektrosrem1@gmail.com"
           linkURL="mailto:elektrosrem1@gmail.com"
           isArrowVisible={true}
           ><Icon name="envelopeOpen" />
@@ -131,3 +178,4 @@ const formBottomText: string = "Odgovorićemo vam u roku od 1-2 radna dana.";
     </div>
   </div>
 </section>
+

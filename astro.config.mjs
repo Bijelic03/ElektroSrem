@@ -6,6 +6,7 @@ import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
 import icon from "astro-icon";
+import react from "@astrojs/react"
 
 // https://astro.build/config
 export default defineConfig({
@@ -31,6 +32,9 @@ export default defineConfig({
 			  forward: ["dataLayer.push"],
 			},
 		}),
+    react({
+      include: ['**/react/*'],
+    }),
     icon(),
     tailwind(),
     sitemap({
