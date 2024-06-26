@@ -26,11 +26,10 @@ jobs:
       - name: 'Create env file'
         run: |
           touch ./.env.production
-          echo PUBLIC_ELEKTROSREM_PUBLIC_KEY=${{ secrets.EMAIL_JS_PUBLIC_KEY }} >> .env
-          cat .env
+          echo PUBLIC_ELEKTROSREM_PUBLIC_KEY=${{ secrets.EMAIL_JS_PUBLIC_KEY }} >> ./.env
 
       - name: Build the project
-        run: npm run build
+        run: npm run buildProd
 
       - name: Minify HTML files
         run: node process-html.mjs
