@@ -25,7 +25,7 @@ const formBottomText: string = "Odgovorićemo vam u roku od 1-2 radna dana.";
 import { pathHasLocale } from 'astro:i18n';
 
   function attachSendEmail() {
-    async function sendEmail(event) {
+    async function sendEmail(event: any) {
       event.preventDefault();
       const form = event.target;
 
