@@ -34,24 +34,33 @@ import { pathHasLocale } from 'astro:i18n';
       const email = form.querySelector('#hs-email-contacts').value;
       const phone = form.querySelector('#hs-phone-number').value;
       const message = form.querySelector('#hs-about-contacts').value;
-      
-      console.log(firstName, lastName, email, phone, message)
+      const statusMessage = form.querySelector('#status-message');
+
+    if (firstName && lastName && email && phone && message) {
       try {
         const emailjs = await import('@emailjs/browser');
         const templateParams = {
-        firstName,
-        lastName,
-        email,
-        phone,
-        message
-      };
+          firstName,
+          lastName,
+          email,
+          phone,
+          message,
+        };
         await emailjs.send('service_37zy63b', 'template_4bku19b', templateParams, import.meta.env.PUBLIC_ELEKTROSREM_PUBLIC_KEY);
-
+        
         form.reset();
+        statusMessage.textContent = "Uspešno ste poslali poruku.";
+        statusMessage.style.color = 'green';
       } catch (error) {
+        statusMessage.textContent = "Došlo je do greške prilikom slanja poruke.";
+        statusMessage.style.color = 'red';
       }
+    } else {
+      statusMessage.textContent = "Niste popunili sva polja.";
+      statusMessage.style.color = 'red';
     }
-
+  
+  }
     const form = document.querySelector('form');
     if (form) {
       form.addEventListener('submit', sendEmail);
@@ -124,6 +133,7 @@ import { pathHasLocale } from 'astro:i18n';
           </div>
 
           <div class="mt-3 text-center">
+            <p id="status-message" class="text-sm text-neutral-600 dark:text-neutral-400"></p>
             <p class="text-sm text-neutral-600 dark:text-neutral-400">
               {formBottomText}
             </p>
