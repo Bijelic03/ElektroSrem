@@ -2,6 +2,7 @@
 import { getImage } from "astro:assets";
 import { OG, SEO, SITE } from "@data/constants";
 import faviconSvgSrc from "@images/icon.svg";
+import faviconIcoSrc from "@images/icon.ico";
 import faviconSrc from "@images/icon.png";
 
 // Default properties for the Meta component. These values are used if props are not provided.
@@ -126,5 +127,7 @@ const appleTouchIcon = await getImage({
 <meta name="mobile-web-app-capable" content="yes" />
 <link href={appleTouchIcon.src} rel="apple-touch-icon" />
 <link href={appleTouchIcon.src} rel="shortcut icon" />
+<link rel="icon" href={faviconIcoSrc}>
+
 <!-- Set theme color -->
 <meta name="theme-color" content="#facc15" />
